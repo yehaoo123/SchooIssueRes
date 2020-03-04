@@ -17,5 +17,9 @@ from django.urls import path
 from applications.userzone import views
 
 urlpatterns = [
-    # url mapping
+    path('login/', views.user_login),
+    path('check_code/', views.check_code),
+    path('logout/', views.user_logout),
+
+    # path('admin_login/', views.admin_login),
 ]
