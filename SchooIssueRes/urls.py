@@ -18,6 +18,9 @@ from django.urls import path
 from django.urls import include
 from applications.cms import views
 
+from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage_demo, name='homepage' ),
@@ -26,4 +29,4 @@ urlpatterns = [
     path('recommend/', include('applications.recommendation.urls') ),
     path('statistics/', include('applications.webstatistics.urls') ),
 
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
