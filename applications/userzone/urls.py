@@ -21,5 +21,8 @@ urlpatterns = [
     path('check_code/', views.check_code),
     path('logout/', views.user_logout),
 
+    path('admin_login/', views.admin_login),
+    path('admin_logout/', views.admin_logout),
+
     # path('admin_login/', views.admin_login),
 ]

@@ -23,9 +23,10 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage_demo, name='homepage' ),
+    path('', views.homepage),
+    path('api/', include('applications.cms.api_urls')),
     path('userzone/', include('applications.userzone.urls') ),
-    path('content/', include('applications.cms.urls') ),
+    path('cms/', include('applications.cms.urls') ),
     path('recommend/', include('applications.recommendation.urls') ),
     path('statistics/', include('applications.webstatistics.urls') ),
 
