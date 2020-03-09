@@ -14,8 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
+from django.urls import re_path
 from applications.cms import views
 
 urlpatterns = [
-    # url mapping
+    re_path('question_detail/(?P<qid>\d+)/', views.question_detail_page),
+
+    # re_path('user/(?P<uid>\d+)/', views.userzone_page)    # 返回用户中心页面
+
 ]
